@@ -6,7 +6,10 @@ import { ReactComponent as CalenderIcon } from './icons/calendar.svg';
 function App() {
 	const [dateState, setDateState] = useState(new Date());
 	useEffect(() => {
-		setInterval(() => setDateState(new Date()), 3000);
+		setInterval(() => {
+			console.log('watching');
+			setDateState(new Date());
+		}, 30000);
 	}, []);
 	return (
 		<div className="App">
